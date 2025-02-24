@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Messaging - {{ user }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Private Messages with {{ user }}</h1>
+        </header>
+        
+        <div class="message-box">
+            {% for msg in user_messages %}
+                <div class="message">
+                    <p>{{ msg }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <form method="POST" class="message-form">
+            <textarea name="message" placeholder="Type your message..." required></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Forum</a>
+    </div>
+</body>
+</html>
+``

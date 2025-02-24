@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://www.w3schools.com/w3images/forest.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+/* User Cards */
+.user-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 250px;
+    height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-header p {
+    font-size: 0.9rem;
+}
+
+.btn {
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+    background: #ff6347;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff4500;
+}
+
+/* Private Message Section */
+.message-box {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.message-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    height: 100px;
+    resize: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-form button {
+    background: #ff6347;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.message-form button:hover {
+    background: #ff4500;
+}
+
+.back-btn {
+    color: #ff6347;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .user-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
